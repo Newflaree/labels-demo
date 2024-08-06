@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email de contacto</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .email-container {
+        max-width: 500px;
+        margin: 40px auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        display: flex;
+        background-color: #1FBEE8;
+        color: #ffffff;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        font-size: 24px;
+      }
+      .text-header {
+        width: 50%;
+        text-align: center;
+      }
+      .logo-header {
+        width: 50%;
+        text-align: center;
+      }
+      .content {
+        padding: 20px 40px;
+      }
+      .label {
+        font-weight: bold;
+        color: #1FBEE8;
+        margin-bottom: 5px;
+      }
+      .value {
+        margin-bottom: 20px;
+        color: #5C5D5F;
+      }
+      .title-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        height: 50px;
+        width: 180px;
+        border-radius: 6px;
+      }
+      .footer {
+          background-color: #1FBEE8;
+          color: #ffffff;
+          text-align: center;
+          padding: 10px;
+          font-size: 12px;
+      }
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+        }
+        .text-header,
+        .logo-header {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <div class="logo-header">
+          <p>m<span style="color:#5C5D5F;">ü</span>p<span style="color:#5C5D5F;">ü</span>tun</p>
+        </div>
+        <p class="text-header">Nuevo Mensaje</p>
+      </div>
+      <div class="content">
+        <div class="label">De:</div>
+        <div class="value">{{name}} {{lastName}} &lt;{{emailAddress}}&gt;</div>
+
+        <div class="label">Asunto:</div>
+        <div class="value">{{subject}}</div>
+
+        <div class="label">Mensaje:</div>
+        <div class="value">{{message}}</div>
+      </div>
+      <div class="footer">Müpütun Tecnologías</div>
+    </div>
+  </body>
+</html>
